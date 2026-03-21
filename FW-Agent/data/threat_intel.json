@@ -1,0 +1,43 @@
+{
+  "known_malicious_ips": [
+    {
+      "ip": "45.33.22.11",
+      "threat_type": "Ransomware_C2",
+      "confidence": "High",
+      "actor": "APT_X",
+      "description": "Known Command and Control server for ransomware campaigns."
+    },
+    {
+      "ip": "185.11.22.33",
+      "threat_type": "Botnet",
+      "confidence": "Medium",
+      "actor": "Unknown",
+      "description": "Involved in recent DDoS attacks."
+    },
+    {
+      "ip": "10.0.0.100",
+      "threat_type": "Mitigated (Firewall Rule (perimeter))",
+      "confidence": "High",
+      "actor": "SOC_Agent_Blocked",
+      "description": "Autoblocked during SOC mitigation round. Action: Firewall Rule (perimeter)"
+    },
+    {
+      "ip": "10.0.0.13",
+      "threat_type": "Mitigated (Firewall Rule (iptables))",
+      "confidence": "High",
+      "actor": "SOC_Agent_Blocked",
+      "description": "Autoblocked during SOC mitigation round. Action: Firewall Rule (iptables)"
+    },
+    {
+      "ip": "10.0.0.1",
+      "threat_type": "Mitigated (Firewall Rule (iptables))",
+      "confidence": "High",
+      "actor": "SOC_Agent_Blocked",
+      "description": "Autoblocked during SOC mitigation round. Action: Firewall Rule (iptables)"
+    }
+  ],
+  "malicious_processes": [
+    "unknown.exe",
+    "crypto_locker.exe"
+  ]
+}
