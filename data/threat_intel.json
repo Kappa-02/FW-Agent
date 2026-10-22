@@ -1,0 +1,22 @@
+{
+  "known_malicious_ips": [
+    {
+      "ip": "198.51.100.20",
+      "threat_type": "Ransomware_C2",
+      "confidence": "High",
+      "actor": "Synthetic demo actor",
+      "description": "Fictional indicator for the hackathon scenario; not a real threat attribution."
+    },
+    {
+      "ip": "203.0.113.10",
+      "threat_type": "Botnet",
+      "confidence": "Medium",
+      "actor": "Synthetic demo actor",
+      "description": "Fictional indicator for the hackathon scenario; not a real threat attribution."
+    }
+  ],
+  "malicious_processes": [
+    "unknown.exe",
+    "crypto_locker.exe"
+  ]
+}

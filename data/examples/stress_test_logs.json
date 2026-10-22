@@ -1,0 +1,323 @@
+[
+  {
+    "timestamp": "2026-03-21T16:00:01Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_01",
+    "event_type": "login_success",
+    "username": "user_alpha"
+  },
+  {
+    "timestamp": "2026-03-21T16:00:05Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_02",
+    "event_type": "login_success",
+    "username": "user_beta"
+  },
+  {
+    "timestamp": "2026-03-21T16:00:12Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "network_traffic_allowed",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T16:00:20Z",
+    "source_ip": "192.168.1.5",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request_get",
+    "username": "guest"
+  },
+  {
+    "timestamp": "2026-03-21T16:00:30Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "ping_response",
+    "username": "system"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:00Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "root"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:01Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:02Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "user"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:03Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "test"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:04Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "guest"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:05Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "support"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:06Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "mysql"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:07Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "oracle"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:08Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "webmaster"
+  },
+  {
+    "timestamp": "2026-03-21T16:01:09Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed",
+    "username": "backup"
+  },
+  {
+    "timestamp": "2026-03-21T16:02:15Z",
+    "source_ip": "192.168.1.105",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "sql_query_exec",
+    "username": "db_service"
+  },
+  {
+    "timestamp": "2026-03-21T16:03:40Z",
+    "source_ip": "192.168.1.28",
+    "destination_ip": "10.0.0.8",
+    "target_host": "Gateway",
+    "event_type": "vpn_connection_established",
+    "username": "remote_user_1"
+  },
+  {
+    "timestamp": "2026-03-21T16:05:00Z",
+    "source_ip": "10.0.0.13",
+    "destination_ip": "local",
+    "target_host": "Server_DB",
+    "event_type": "disk_space_low",
+    "details": "92% usage"
+  },
+  {
+    "timestamp": "2026-03-21T16:05:10Z",
+    "source_ip": "10.0.0.13",
+    "destination_ip": "local",
+    "target_host": "Server_DB",
+    "event_type": "disk_space_critical",
+    "details": "98% usage"
+  },
+  {
+    "timestamp": "2026-03-21T16:06:22Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "high_memory_usage",
+    "details": "RAM at 94%"
+  },
+  {
+    "timestamp": "2026-03-21T16:07:05Z",
+    "source_ip": "203.0.113.10",
+    "destination_ip": "10.0.0.1",
+    "target_host": "Router_Main",
+    "event_type": "port_scan_detected",
+    "details": "Scanning ports 1-100"
+  },
+  {
+    "timestamp": "2026-03-21T16:07:06Z",
+    "source_ip": "203.0.113.10",
+    "destination_ip": "10.0.0.1",
+    "target_host": "Router_Main",
+    "event_type": "port_scan_detected",
+    "details": "Scanning ports 101-200"
+  },
+  {
+    "timestamp": "2026-03-21T16:07:07Z",
+    "source_ip": "203.0.113.10",
+    "destination_ip": "10.0.0.1",
+    "target_host": "Router_Main",
+    "event_type": "port_scan_detected",
+    "details": "Scanning ports 201-300"
+  },
+  {
+    "timestamp": "2026-03-21T16:08:55Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "dns_query",
+    "query": "malicious-site.com"
+  },
+  {
+    "timestamp": "2026-03-21T16:10:00Z",
+    "source_ip": "system",
+    "destination_ip": "10.0.0.7",
+    "target_host": "Server_Files",
+    "event_type": "backup_started",
+    "username": "backup_bot"
+  },
+  {
+    "timestamp": "2026-03-21T16:12:30Z",
+    "source_ip": "10.0.0.7",
+    "destination_ip": "10.0.0.100",
+    "target_host": "Server_Backup",
+    "event_type": "data_transfer_high",
+    "details": "Transferring 500GB"
+  },
+  {
+    "timestamp": "2026-03-21T16:15:00Z",
+    "source_ip": "192.168.1.44",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_05",
+    "event_type": "login_success",
+    "username": "user_gamma"
+  },
+  {
+    "timestamp": "2026-03-21T16:18:22Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "config_changed",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T16:20:01Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_success",
+    "username": "root",
+    "details": "ALERT: Success after many attempts"
+  },
+  {
+    "timestamp": "2026-03-21T16:21:00Z",
+    "source_ip": "10.0.0.13",
+    "destination_ip": "192.0.2.3",
+    "target_host": "External",
+    "event_type": "outbound_connection",
+    "details": "C2 server suspected"
+  },
+  {
+    "timestamp": "2026-03-21T16:22:15Z",
+    "source_ip": "system",
+    "destination_ip": "local",
+    "target_host": "Server_DB",
+    "event_type": "process_killed",
+    "process": "mysql_secure"
+  },
+  {
+    "timestamp": "2026-03-21T16:25:30Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "policy_denied",
+    "source_port": 4444
+  },
+  {
+    "timestamp": "2026-03-21T16:26:00Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "policy_denied",
+    "source_port": 4444
+  },
+  {
+    "timestamp": "2026-03-21T16:26:30Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "policy_denied",
+    "source_port": 4444
+  },
+  {
+    "timestamp": "2026-03-21T16:30:45Z",
+    "source_ip": "system",
+    "destination_ip": "local",
+    "target_host": "Server_Web",
+    "event_type": "service_restart",
+    "service": "apache2"
+  },
+  {
+    "timestamp": "2026-03-21T16:35:10Z",
+    "source_ip": "192.168.1.60",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "login_success",
+    "username": "dev_1"
+  },
+  {
+    "timestamp": "2026-03-21T16:36:00Z",
+    "source_ip": "192.168.1.60",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "file_upload",
+    "file": "patch_v2.tar.gz"
+  },
+  {
+    "timestamp": "2026-03-21T16:40:00Z",
+    "source_ip": "10.0.0.100",
+    "destination_ip": "local",
+    "target_host": "Server_Backup",
+    "event_type": "backup_completed",
+    "status": "success"
+  },
+  {
+    "timestamp": "2026-03-21T16:45:12Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "health_check_passed",
+    "status": "200 OK"
+  },
+  {
+    "timestamp": "2026-03-21T16:50:00Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "logout",
+    "username": "admin"
+  }
+]

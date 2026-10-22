@@ -1,72 +1,131 @@
-# 🛡️ FW-Agent
-**Agente AI per l'automatizzazione di Firewall e Analisi SOC**
+# FW-Agent — SOC Investigation Assistant
 
-FW-Agent è un'applicazione avanzata che simula un Security Operations Center (SOC) intelligente. Sfrutta il potenziale dei Large Language Models (LLM) tramite **LangGraph** e **LangChain** per orchestrare una squadra di agenti AI autonomi capaci di analizzare log di rete, identificare minacce e suggerire o applicare mitigazioni difensive. L'interfaccia utente è sviluppata in **Streamlit** per offrire una dashboard chiara ed interattiva in tempo reale.
+A **team hackathon prototype** that combines Python, LangGraph and a Streamlit dashboard to investigate synthetic security events, enrich IP indicators and prepare defensive actions for human review.
 
-## 🚀 Funzionalità Principali
+Built for **Unchained: The Agentic Era**, **21 March 2026**, by **Federico Capitani, Lorenzo Giandomenico and Giuseppe Mininni**. The implementation was developed collaboratively.
 
-- **Dashboard Real-Time**: Interfaccia Streamlit moderna che visualizza metriche SIEM, log di rete anomali e una mappa globale interattiva delle minacce.
-- **Orchestrazione Multi-Agente (LangGraph)**:
-  - 🕵️ **1. Triage Agent**: Analizza automaticamente i log SIEM per rilevare schemi d'attacco (brute force, ransomware, port scan).
-  - 🌍 **2. Network Intelligence Agent**: Arricchisce i dati investigando gli IP sospetti con geolocalizzazione e controlli di reputazione (Threat Intel).
-  - 🛡️ **3. Mitigation Agent**: Esegue azioni difensive mirate, ma *solo* previa autorizzazione (paradigma Zero Trust).
-- **Human-in-the-Loop**: Il sistema richiede l'approvazione umana (tramite prompt o bottoni rapidi) prima di applicare modifiche infrastrutturali.
-- **Risposte Attive (Tools)**:
-  - Generazione di regole Firewall pronte all'uso (iptables, ufw, cisco).
-  - Schieramento automatico di Honeypot (via container Docker) per intrappolare gli attaccanti.
+![FW-Agent offline dashboard](docs/images/dashboard.png)
 
-## 📂 Struttura del Progetto
+*The screenshot shows the real dashboard in offline mode. The interface and original prompts are in Italian; this README is in English.*
+
+## What it does
+
+- Displays a local dataset of **55 synthetic SIEM events**, with event counts and categories.
+- Orchestrates three agent roles: **triage**, **network intelligence** and **mitigation assistance**.
+- Searches local JSON logs and a fictional threat-intelligence fixture.
+- Returns explicitly labelled synthetic coordinates for documentation IPs; optionally queries IPAPI for other public IPv4 addresses.
+- Generates **reviewable firewall command drafts** for iptables, UFW and Cisco ACL syntax.
+- Pauses the workflow for operator input. Code checks the selected **action and IPv4 address** before invoking a mitigation tool, and clears those permissions afterwards.
+- Simulates a local web-container demo by default; real Docker execution requires a separate configuration opt-in and UI confirmation.
+
+**Scope:** the application analyses demonstration data. It does not ingest live SIEM telemetry, apply firewall rules, isolate networks or automatically block attackers. The container demo runs `nginxdemos/hello`; it is not a complete honeypot and does not redirect traffic.
+
+## Quick start
+
+**Requirements:** Python **3.12 or later**. Locally verified with Python **3.14**. Docker and a Google API key are optional.
+
+```bash
+git clone https://github.com/Kappa-02/FW-Agent.git
+cd FW-Agent
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.lock.txt
+python -m streamlit run app_soc.py
+```
+
+On Windows, create the environment with `py -m venv .venv` and activate it with `.venv\Scripts\Activate.ps1` in PowerShell.
+
+Open the local URL printed by Streamlit. **Without an API key**, the dashboard still displays the logs, counts and event chart; AI analysis is disabled and no model requests are made.
+
+`requirements.lock.txt` records the complete environment used for verification, excluding browser tooling used only to capture the screenshot. `requirements.txt` lists the application's direct dependencies with tested versions.
+
+### Enable AI analysis
+
+1. Copy `.env.example` to `.env` in the repository root.
+2. Set `GOOGLE_API_KEY` to your own Google API key.
+3. Restart Streamlit and click **Analizza i log**.
+
+The default model is `gemini-2.5-flash`. Use `FW_AGENT_MODEL` to select a model available to your account. `GEMINI_API_KEY` is accepted as an alternative key name. The `.env` file is ignored by Git.
+
+This mode sends the scenario and conversation to the configured Google model and may consume API quota. Geolocation of other public addresses uses IPAPI. Keep real confidential logs out of this demo.
+
+### Review proposed actions
+
+After investigation, select the IP addresses, tick the confirmation checkbox and choose an action:
+
+| Action | Actual effect |
+| --- | --- |
+| **Prepara regole** | Returns command text marked `RULE DRAFT — NOT APPLIED`. No firewall command is executed. |
+| **Demo container**, default configuration | Returns `SIMULATION`; no Docker command is run. |
+| **Demo container**, `FW_AGENT_ENABLE_DOCKER=true` | Attempts to start a sample web container on `127.0.0.1:8080`. Reports failure as `ERROR`, or confirms that this specific demo container started. |
+
+Chat messages alone do not grant mitigation permissions. The graph checks each tool request against the UI's selected actions and IPs, permits each action/IP pair once per confirmation, and clears the grant after that turn. Each agent loop is limited to eight model responses.
+
+The Docker demo uses a fixed local port, so an occupied port or existing container name can prevent startup. Existing containers are never removed automatically. Inspect or remove a demo manually when finished:
+
+```bash
+docker ps --filter name=fw-agent-demo-
+docker rm -f fw-agent-demo-demo
+```
+
+## Architecture
+
+```text
+Synthetic JSON events
+        │
+        ▼
+Triage agent ──► Network intelligence agent
+                         │
+                         ▼
+                 Operator review in UI
+                         │
+              Selected actions + IPs
+                         ▼
+               Code approval check
+                         │
+                         ▼
+                 Mitigation assistant
+                 ├── Firewall draft
+                 └── Simulated / local container demo
+                         │
+                         └──► Operator review
+```
+
+**Stack:** Python · LangGraph · LangChain Google GenAI · Streamlit · pandas · requests.
 
 ```text
 FW-Agent/
-├── app_soc.py            # Entry point dell'applicazione (Dashboard Streamlit)
-├── agents/
-│   └── soc_graph.py      # Definizione del workflow LangGraph e dei 3 Agenti AI
+├── app_soc.py                 # Streamlit dashboard and operator controls
+├── agents/soc_graph.py        # Agent roles, graph and approval enforcement
 ├── tools/
-│   └── security_tools.py # Strumenti tecnici (query SIEM, check IP, regole FW, honeypot)
-├── data/
-│   ├── siem_logs.json    # Log simulati del SIEM per l'analisi
-│   └── threat_intel.json # Database locale di IP malevoli noti (Threat Intelligence)
-├── image/                # Asset grafici (logo, etc.)
-└── requirements.txt      # Dipendenze del progetto Python
+│   ├── security_tools.py      # Log lookup, IP enrichment and action tools
+│   └── check_models.py        # Optional Google model availability helper
+├── data/                      # Synthetic default scenario and reference fixtures
+├── assets/Logo.png
+├── docs/images/dashboard.png
+├── tests/                     # Offline regression and dashboard tests
+├── Presentazione.pdf          # Original hackathon slides
+├── .env.example
+├── requirements.txt
+└── requirements.lock.txt
 ```
 
-## 🛠️ Requisiti di Sistema
+See [data/README.md](data/README.md) for the default scenario and the two additional 40-event fixtures preserved from the original project folder. The current application loads `data/siem_logs.json`.
 
-- Python 3.10+
-- Una API Key di Google (per utilizzare i modelli Gemini come `gemini-2.5-flash`).
-- Docker (opzionale, ma raccomandato per il corretto funzionamento del tool di deploy `deploy_honeypot`).
+## Verification
 
-## 💻 Installazione
+With the virtual environment active, run:
 
-1. Clona il repository o naviga nella cartella del progetto.
-2. Crea un ambiente virtuale (raccomandato):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # Su Windows: venv\Scripts\activate
-   ```
-3. Installa le dipendenze:
-   ```bash
-   pip install -r FW-Agent/requirements.txt
-   ```
-4. Configura le variabili d'ambiente:
-   - Crea un file `.env` nella cartella in cui eseguirai l'app.
-   - Aggiungi la tua chiave per accedere a Google Generative AI:
-     ```env
-     GOOGLE_API_KEY=la_tua_chiave_api_qui
-     ```
-
-## ▶️ Esecuzione
-
-Per avviare la SOC Dashboard, posizionati all'interno della cartella principale (o nella sub-directory contenente l'app) ed esegui:
 ```bash
-python.exe -m streamlit run FW-Agent/app_soc.py
+python -m unittest discover -s tests -t . -v
+python -m pip check
 ```
-*(Nota: per il corretto caricamento dei path dei file temporanei e dei dati, assicurati di avviare il comando Streamlit con la configurazione di working directory appropriata).*
 
-## 🧠 Flusso di Lavoro dell'Agente
-1. **Analisi Iniziale**: L'applicazione carica automaticamente `siem_logs.json` e innesca il grafo segnalando "analizza i log e trova tutte le minacce attive nella rete".
-2. **Streaming Risultati**: Man mano che gli agenti lavorano, il ragionamento logico (estrazione IP, geolocalizzazione) viene elaborato e stampato real-time nel modulo di chat SOC della dashboard.
-3. **Mappa Minacce**: Se gli IP sospetti vengono geolocalizzati, le coordinate si posizioneranno visivamente sulla mappa in basso.
-4. **Approvazione dell'Operatore**: Individuato l'attacco, l'esecuzione agentica passa per un nodo di break e si mette in attesa della conferma del team di sicurezza.
-5. **Azione Definitiva**: L'utente può interagire verbalmente oppure cliccare i pulsanti appositi ("Regola FW", "Attiva Honeypot") per scatenare la reazione difensiva.
+The tests cover input validation, read-only firewall drafting, Docker opt-in and failure reporting, action/IP approval, checkpoint resume, permission expiry, and dashboard operation without an API key. They exercise the real graph with a deterministic local model substitute; HTTP and Docker effects are mocked. **No live Gemini analysis or Docker deployment is claimed by these tests.**
+
+## Project notes
+
+- The [original presentation](Presentazione.pdf) is retained as an artefact of the hackathon. This README describes the current implementation and its limitations.
+- Session memory is held in process. This prototype does not provide production authentication, role management, durable auditing or a sandbox for generated recommendations.
+- Generated commands and model conclusions require review; an AI response is not evidence that a defensive action succeeded. Tool outputs are shown separately in the dashboard.
+- No explicit software licence has been added; the repository remains a collaborative hackathon project.

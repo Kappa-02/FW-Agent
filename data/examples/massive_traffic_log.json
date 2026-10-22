@@ -1,0 +1,338 @@
+[
+  {
+    "timestamp": "2026-03-21T10:00:01Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_01",
+    "event_type": "network_flow",
+    "bytes": 1024,
+    "protocol": "TCP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:02Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_02",
+    "event_type": "network_flow",
+    "bytes": 512,
+    "protocol": "UDP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:03Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "packet_drop",
+    "reason": "policy_violation"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:04Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "192.0.2.3",
+    "target_host": "External_DNS",
+    "event_type": "dns_query",
+    "query": "google.com"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:05Z",
+    "source_ip": "192.168.1.20",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-03-21T10:00:06Z",
+    "source_ip": "192.168.1.21",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request",
+    "method": "POST",
+    "status": 201
+  },
+  {
+    "timestamp": "2026-03-21T10:00:07Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "sql_connect",
+    "user": "app_user"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:08Z",
+    "source_ip": "192.168.1.45",
+    "destination_ip": "10.0.0.100",
+    "target_host": "Server_HR",
+    "event_type": "file_read",
+    "file": "roster.csv"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:09Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "vpn_auth_success",
+    "user": "vpn_user_1"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:10Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "health_check",
+    "status": "UP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:01Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_01",
+    "event_type": "network_flow",
+    "bytes": 1024,
+    "protocol": "TCP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:02Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_02",
+    "event_type": "network_flow",
+    "bytes": 512,
+    "protocol": "UDP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:03Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "packet_drop",
+    "reason": "policy_violation"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:04Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "192.0.2.3",
+    "target_host": "External_DNS",
+    "event_type": "dns_query",
+    "query": "google.com"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:05Z",
+    "source_ip": "192.168.1.20",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-03-21T10:00:06Z",
+    "source_ip": "192.168.1.21",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request",
+    "method": "POST",
+    "status": 201
+  },
+  {
+    "timestamp": "2026-03-21T10:00:07Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "sql_connect",
+    "user": "app_user"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:08Z",
+    "source_ip": "192.168.1.45",
+    "destination_ip": "10.0.0.100",
+    "target_host": "Server_HR",
+    "event_type": "file_read",
+    "file": "roster.csv"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:09Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "vpn_auth_success",
+    "user": "vpn_user_1"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:10Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "health_check",
+    "status": "UP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:01Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_01",
+    "event_type": "network_flow",
+    "bytes": 1024,
+    "protocol": "TCP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:02Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_02",
+    "event_type": "network_flow",
+    "bytes": 512,
+    "protocol": "UDP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:03Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "packet_drop",
+    "reason": "policy_violation"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:04Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "192.0.2.3",
+    "target_host": "External_DNS",
+    "event_type": "dns_query",
+    "query": "google.com"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:05Z",
+    "source_ip": "192.168.1.20",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-03-21T10:00:06Z",
+    "source_ip": "192.168.1.21",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request",
+    "method": "POST",
+    "status": 201
+  },
+  {
+    "timestamp": "2026-03-21T10:00:07Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "sql_connect",
+    "user": "app_user"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:08Z",
+    "source_ip": "192.168.1.45",
+    "destination_ip": "10.0.0.100",
+    "target_host": "Server_HR",
+    "event_type": "file_read",
+    "file": "roster.csv"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:09Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "vpn_auth_success",
+    "user": "vpn_user_1"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:10Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "health_check",
+    "status": "UP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:01Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_01",
+    "event_type": "network_flow",
+    "bytes": 1024,
+    "protocol": "TCP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:02Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.50",
+    "target_host": "Workstation_02",
+    "event_type": "network_flow",
+    "bytes": 512,
+    "protocol": "UDP"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:03Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "packet_drop",
+    "reason": "policy_violation"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:04Z",
+    "source_ip": "192.168.1.15",
+    "destination_ip": "192.0.2.3",
+    "target_host": "External_DNS",
+    "event_type": "dns_query",
+    "query": "google.com"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:05Z",
+    "source_ip": "192.168.1.20",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request",
+    "method": "GET",
+    "status": 200
+  },
+  {
+    "timestamp": "2026-03-21T10:00:06Z",
+    "source_ip": "192.168.1.21",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "http_request",
+    "method": "POST",
+    "status": 201
+  },
+  {
+    "timestamp": "2026-03-21T10:00:07Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "sql_connect",
+    "user": "app_user"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:08Z",
+    "source_ip": "192.168.1.45",
+    "destination_ip": "10.0.0.100",
+    "target_host": "Server_HR",
+    "event_type": "file_read",
+    "file": "roster.csv"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:09Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Int",
+    "event_type": "vpn_auth_success",
+    "user": "vpn_user_1"
+  },
+  {
+    "timestamp": "2026-03-21T10:00:10Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "health_check",
+    "status": "UP"
+  }
+]

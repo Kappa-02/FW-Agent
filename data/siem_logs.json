@@ -1,0 +1,443 @@
+[
+  {
+    "timestamp": "2026-03-21T09:01:53Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Internal",
+    "event_type": "network_traffic_allowed",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:04:47Z",
+    "source_ip": "192.168.1.28",
+    "destination_ip": "10.0.0.8",
+    "target_host": "Gateway",
+    "event_type": "backup_started",
+    "username": "bob"
+  },
+  {
+    "timestamp": "2026-03-21T09:08:39Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Web",
+    "event_type": "ping_response",
+    "username": "system"
+  },
+  {
+    "timestamp": "2026-03-21T09:09:52Z",
+    "source_ip": "192.168.1.34",
+    "destination_ip": "10.0.0.7",
+    "target_host": "Server_Files",
+    "event_type": "config_update",
+    "username": "backup_service"
+  },
+  {
+    "timestamp": "2026-03-21T09:10:21Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "backup_completed",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T09:10:51Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.5",
+    "target_host": "Router_Main",
+    "event_type": "login_success",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T09:11:59Z",
+    "source_ip": "192.168.1.31",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Gateway",
+    "event_type": "login_success",
+    "username": "backup_service"
+  },
+  {
+    "timestamp": "2026-03-21T09:12:40Z",
+    "source_ip": "192.168.1.18",
+    "destination_ip": "10.0.0.11",
+    "target_host": "Server_Files",
+    "event_type": "login_success",
+    "username": "network_admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:15:38Z",
+    "source_ip": "192.168.1.32",
+    "destination_ip": "10.0.0.19",
+    "target_host": "Gateway",
+    "event_type": "backup_started",
+    "username": "network_admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:16:15Z",
+    "source_ip": "192.168.1.22",
+    "destination_ip": "10.0.0.1",
+    "target_host": "Server_DB",
+    "event_type": "backup_completed",
+    "username": "network_admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:18:30Z",
+    "source_ip": "192.168.1.25",
+    "destination_ip": "10.0.0.5",
+    "target_host": "Server_Files",
+    "event_type": "backup_completed",
+    "username": "network_admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:18:54Z",
+    "source_ip": "192.168.1.14",
+    "destination_ip": "10.0.0.3",
+    "target_host": "Gateway",
+    "event_type": "network_traffic_allowed",
+    "username": "backup_service"
+  },
+  {
+    "timestamp": "2026-03-21T09:23:08Z",
+    "source_ip": "192.168.1.39",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_Files",
+    "event_type": "backup_completed",
+    "username": "network_admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:26:57Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.12",
+    "target_host": "Firewall_Internal",
+    "event_type": "backup_completed",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:27:07Z",
+    "source_ip": "192.168.1.34",
+    "destination_ip": "10.0.0.10",
+    "target_host": "Router_Main",
+    "event_type": "backup_completed",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T09:27:07Z",
+    "source_ip": "192.168.1.17",
+    "destination_ip": "10.0.0.5",
+    "target_host": "Server_DB",
+    "event_type": "login_success",
+    "username": "bob"
+  },
+  {
+    "timestamp": "2026-03-21T09:27:42Z",
+    "source_ip": "192.168.1.25",
+    "destination_ip": "10.0.0.17",
+    "target_host": "Firewall_Internal",
+    "event_type": "ping_response",
+    "username": "network_admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:27:44Z",
+    "source_ip": "192.168.1.27",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "backup_started",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T09:34:04Z",
+    "source_ip": "192.168.1.34",
+    "destination_ip": "10.0.0.17",
+    "target_host": "Gateway",
+    "event_type": "backup_completed",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:34:57Z",
+    "source_ip": "192.168.1.39",
+    "destination_ip": "10.0.0.17",
+    "target_host": "Server_Files",
+    "event_type": "backup_started",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:35:06Z",
+    "source_ip": "192.168.1.16",
+    "destination_ip": "10.0.0.3",
+    "target_host": "Server_Web",
+    "event_type": "login_success",
+    "username": "system"
+  },
+  {
+    "timestamp": "2026-03-21T09:36:51Z",
+    "source_ip": "192.168.1.38",
+    "destination_ip": "10.0.0.17",
+    "target_host": "Gateway",
+    "event_type": "ping_response",
+    "username": "alice"
+  },
+  {
+    "timestamp": "2026-03-21T09:38:11Z",
+    "source_ip": "192.168.1.27",
+    "destination_ip": "10.0.0.6",
+    "target_host": "Server_Files",
+    "event_type": "backup_completed",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T09:39:21Z",
+    "source_ip": "192.168.1.23",
+    "destination_ip": "10.0.0.11",
+    "target_host": "Firewall_Internal",
+    "event_type": "config_update",
+    "username": "bob"
+  },
+  {
+    "timestamp": "2026-03-21T09:39:58Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.15",
+    "target_host": "Server_Files",
+    "event_type": "login_success",
+    "username": "network_admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:40:09Z",
+    "source_ip": "192.168.1.19",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Firewall_Internal",
+    "event_type": "backup_completed",
+    "username": "backup_service"
+  },
+  {
+    "timestamp": "2026-03-21T09:40:18Z",
+    "source_ip": "192.168.1.30",
+    "destination_ip": "10.0.0.20",
+    "target_host": "Server_Files",
+    "event_type": "config_update",
+    "username": "backup_service"
+  },
+  {
+    "timestamp": "2026-03-21T09:40:31Z",
+    "source_ip": "192.168.1.30",
+    "destination_ip": "10.0.0.8",
+    "target_host": "Gateway",
+    "event_type": "backup_started",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:41:01Z",
+    "source_ip": "192.168.1.28",
+    "destination_ip": "10.0.0.19",
+    "target_host": "Server_Web",
+    "event_type": "login_success",
+    "username": "system"
+  },
+  {
+    "timestamp": "2026-03-21T09:42:28Z",
+    "source_ip": "192.168.1.30",
+    "destination_ip": "10.0.0.16",
+    "target_host": "Server_DB",
+    "event_type": "login_success",
+    "username": "system"
+  },
+  {
+    "timestamp": "2026-03-21T09:44:13Z",
+    "source_ip": "192.168.1.13",
+    "destination_ip": "10.0.0.4",
+    "target_host": "Server_Web",
+    "event_type": "config_update",
+    "username": "bob"
+  },
+  {
+    "timestamp": "2026-03-21T09:45:04Z",
+    "source_ip": "192.168.1.27",
+    "destination_ip": "10.0.0.7",
+    "target_host": "Router_Main",
+    "event_type": "config_update",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T09:46:18Z",
+    "source_ip": "192.168.1.18",
+    "destination_ip": "10.0.0.18",
+    "target_host": "Server_DB",
+    "event_type": "network_traffic_allowed",
+    "username": "bob"
+  },
+  {
+    "timestamp": "2026-03-21T09:46:55Z",
+    "source_ip": "192.168.1.17",
+    "destination_ip": "10.0.0.8",
+    "target_host": "Router_Main",
+    "event_type": "login_success",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:50:19Z",
+    "source_ip": "192.168.1.10",
+    "destination_ip": "10.0.0.14",
+    "target_host": "Server_DB",
+    "event_type": "network_traffic_allowed",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T09:52:02Z",
+    "source_ip": "192.168.1.39",
+    "destination_ip": "10.0.0.12",
+    "target_host": "Firewall_Internal",
+    "event_type": "backup_started",
+    "username": "alice"
+  },
+  {
+    "timestamp": "2026-03-21T09:52:08Z",
+    "source_ip": "192.168.1.26",
+    "destination_ip": "10.0.0.3",
+    "target_host": "Firewall_Internal",
+    "event_type": "backup_started",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:54:07Z",
+    "source_ip": "192.168.1.21",
+    "destination_ip": "10.0.0.10",
+    "target_host": "Router_Main",
+    "event_type": "network_traffic_allowed",
+    "username": "system"
+  },
+  {
+    "timestamp": "2026-03-21T09:54:08Z",
+    "source_ip": "192.168.1.32",
+    "destination_ip": "10.0.0.15",
+    "target_host": "Firewall_Internal",
+    "event_type": "backup_started",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T09:55:44Z",
+    "source_ip": "192.168.1.29",
+    "destination_ip": "10.0.0.16",
+    "target_host": "Gateway",
+    "event_type": "ping_response",
+    "username": "system"
+  },
+  {
+    "timestamp": "2026-03-21T09:59:35Z",
+    "source_ip": "192.168.1.17",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Internal",
+    "event_type": "ping_response",
+    "username": "bob"
+  },
+  {
+    "timestamp": "2026-03-21T10:01:05Z",
+    "source_ip": "192.168.1.11",
+    "destination_ip": "10.0.0.12",
+    "target_host": "Gateway",
+    "event_type": "backup_completed",
+    "username": "network_admin"
+  },
+  {
+    "timestamp": "2026-03-21T10:02:17Z",
+    "source_ip": "192.168.1.37",
+    "destination_ip": "10.0.0.8",
+    "target_host": "Router_Main",
+    "event_type": "backup_completed",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T10:05:40Z",
+    "source_ip": "192.168.1.12",
+    "destination_ip": "10.0.0.12",
+    "target_host": "Firewall_Internal",
+    "event_type": "backup_started",
+    "username": "admin"
+  },
+  {
+    "timestamp": "2026-03-21T10:07:20Z",
+    "source_ip": "192.168.1.38",
+    "destination_ip": "10.0.0.1",
+    "target_host": "Router_Main",
+    "event_type": "login_success",
+    "username": "backup_service"
+  },
+  {
+    "timestamp": "2026-03-21T10:07:39Z",
+    "source_ip": "192.168.1.39",
+    "destination_ip": "10.0.0.11",
+    "target_host": "Server_DB",
+    "event_type": "config_update",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T10:10:13Z",
+    "source_ip": "192.168.1.25",
+    "destination_ip": "10.0.0.18",
+    "target_host": "Server_Web",
+    "event_type": "backup_completed",
+    "username": "bob"
+  },
+  {
+    "timestamp": "2026-03-21T10:12:33Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.100",
+    "target_host": "Server_HR",
+    "event_type": "multiple_login_failures",
+    "username": "hr_admin"
+  },
+  {
+    "timestamp": "2026-03-21T10:13:04Z",
+    "source_ip": "192.168.1.16",
+    "destination_ip": "10.0.0.12",
+    "target_host": "Firewall_Internal",
+    "event_type": "backup_completed",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T10:13:05Z",
+    "source_ip": "198.51.100.20",
+    "destination_ip": "10.0.0.100",
+    "target_host": "Server_HR",
+    "event_type": "login_success",
+    "username": "hr_admin"
+  },
+  {
+    "timestamp": "2026-03-21T10:14:10Z",
+    "source_ip": "203.0.113.10",
+    "destination_ip": "10.0.0.1",
+    "target_host": "Router_Main",
+    "event_type": "port_scan_detected",
+    "details": "Aggressive sequential scanning of ports 22, 80, 443"
+  },
+  {
+    "timestamp": "2026-03-21T10:14:45Z",
+    "source_ip": "203.0.113.10",
+    "destination_ip": "10.0.0.13",
+    "target_host": "Server_DB",
+    "event_type": "ssh_login_failed_bruteforce",
+    "username": "root"
+  },
+  {
+    "timestamp": "2026-03-21T10:14:59Z",
+    "source_ip": "192.168.1.31",
+    "destination_ip": "10.0.0.11",
+    "target_host": "Server_Files",
+    "event_type": "backup_started",
+    "username": "charlie"
+  },
+  {
+    "timestamp": "2026-03-21T10:15:22Z",
+    "source_ip": "10.0.0.100",
+    "destination_ip": "10.0.0.100",
+    "target_host": "Server_HR",
+    "event_type": "mass_file_encryption",
+    "process": "unknown.exe",
+    "details": "High volume of file modifications detected (.enc extensions) on HR files"
+  },
+  {
+    "timestamp": "2026-03-21T10:19:29Z",
+    "source_ip": "192.168.1.13",
+    "destination_ip": "10.0.0.2",
+    "target_host": "Firewall_Internal",
+    "event_type": "network_traffic_allowed",
+    "username": "admin"
+  }
+]
